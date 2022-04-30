@@ -67,21 +67,39 @@ export const constantRoutes = [
   {
     path: '/bake',
     component: Layout,
-    redirect: '/bake/sdevice',
+    redirect: '/bake/main',
     name: 'Bake',
     meta: { title: '烘烤管理', icon: 'el-icon-odometer' },
     children: [
       {
-        path: 'sdevice',
-        name: 'DeviceSupervision',
-        component: () => import('@/views/bake_module/sdevice'),
-        meta: { title: '设备监管', icon: '', permission: ["0", "1", "2", "3"] }
+        path: 'main',
+        name: 'BakeMain',
+        component: () => import('@/views/bake_module/main'),
+        meta: { title: '主页', icon: '', permission: ["0", "1", "2", "3"] }
       },
       {
-        path: 'record',
-        name: 'Record',
-        component: () => import('@/views/bake_module/record'),
-        meta: { title: '烘烤记录', icon: '', permission: ["0", "1", "2", "3"] }
+        path: 'runOverview',
+        name: 'RunOverview',
+        component: () => import('@/views/bake_module/run_overview/index'),
+        meta: { title: '烘烤运行总览', icon: '', permission: ["0", "1", "2", "3"] }
+      },
+      {
+        path: 'bakeHistoryOverview',
+        name: 'BakeHistoryOverview',
+        component: () => import('@/views/bake_module/bake_history_overview/index'),
+        meta: { title: '烘烤历史总览', icon: '', permission: ["0", "1", "2", "3"] }
+      },
+      {
+        path: 'deviceRunningList',
+        name: 'DeviceRunningList',
+        component: () => import('@/views/bake_module/device_running_list/sdevice'),
+        meta: { title: '烤房运行列表', icon: '', permission: ["0", "1", "2", "3"] }
+      },
+      {
+        path: 'bakeRecordManagement',
+        name: 'BakeRecordManagement',
+        component: () => import('@/views/bake_module/bake_record_management/record'),
+        meta: { title: '烘烤批次管理', icon: '', permission: ["0", "1", "2", "3"] }
       },
       {
         path: 'mdevice',

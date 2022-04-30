@@ -18,6 +18,7 @@
   import DateTimeComp from '/src/components/DateTimeComp'
   import * as echarts from 'echarts'
 
+
   export default{
     name: 'HistoryLine',
     components: {
