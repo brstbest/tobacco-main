@@ -49,45 +49,123 @@ export const constantRoutes = [
     children: [{
       path: 'home',
       name: 'Home',
-      component: () => import('@/views/production_module/index'),
-      meta: { title: '首页', icon: 'el-icon-s-home', permission: ["0", "1", "2", "3"] }
+      component: () => import('@/views/production_main/index.vue'),
+      meta: { title: '生产板块主页', icon: 'el-icon-s-home', permission: ["0", "1", "2", "3"] }
     }]
   },
   {
     path: '/',
     component: Layout,
-    redirect: '/harvest',
+    redirect: '/home2',
     children: [{
-      path: 'harvest',
-      name: 'Harvest',
-      component: () => import('@/views/production_module/harvest'),
-      meta: { title: '采编管理', icon: 'el-icon-s-opportunity', permission: ["0", "1", "2", "3"] }
+      path: 'home2',
+      name: 'Home2',
+      component: () => import('@/views/technology_main/index.vue'),
+      meta: { title: '技术板块主页', icon: 'el-icon-s-home', permission: ["0", "1", "2", "3"] }
     }]
   },
   {
+    path: '/',
+    component: Layout,
+    redirect: '/home',
+    children: [{
+      path: 'home3',
+      name: 'Home3',
+      component: () => import('@/views/device_main/Equip.vue'),
+      meta: { title: '设备板块主页', icon: 'el-icon-s-home', permission: ["0", "1", "2", "3"] }
+    }]
+  },
+  // {
+  //   path: '/',
+  //   component: Layout,
+  //   redirect: '/harvest',
+  //   children: [{
+  //     path: 'harvest',
+  //     name: 'Harvest',
+  //     component: () => import('@/views/production_module/harvest'),
+  //     meta: { title: '采编管理', icon: 'el-icon-s-opportunity', permission: ["0", "1", "2", "3"] }
+  //   }]
+  // },
+  // {
+  //   path: '/production',
+  //   component: Layout,
+  //   redirect: '/production/main',
+  //   name: 'Production',
+  //   meta: { title: '生产板块', icon: 'el-icon-odometer' },
+  //   children: [
+  //     {
+  //       path: 'main',
+  //       name: 'ProductionMain',
+  //       component: () => import('@/views/production_module/main/index.vue'),
+  //       meta: { title: '生产板块主页', icon: '', permission: ["0", "1", "2", "3"] }
+  //     },
+  //     // {
+  //     //   path: 'main',
+  //     //   name: 'ProductionMain',
+  //     //   component: () => import('@/views/production_module/main/index.vue'),
+  //     //   meta: { title: '其他', icon: '', permission: ["0", "1", "2", "3"] }
+  //     // },
+  //   ]
+  // },
+  {
     path: '/bake',
     component: Layout,
-    redirect: '/bake/sdevice',
+    redirect: '/bake/main',
     name: 'Bake',
     meta: { title: '烘烤管理', icon: 'el-icon-odometer' },
     children: [
+      // {
+      //   path: 'main',
+      //   name: 'BakeMain',
+      //   component: () => import('@/views/bake_module/main'),
+      //   meta: { title: '主页', icon: '', permission: ["0", "1", "2", "3"] }
+      // },
+      // {
+      //   path: 'runOverview',
+      //   name: 'RunOverview',
+      //   component: () => import('@/views/bake_module/run_overview/index'),
+      //   meta: { title: '烘烤运行总览', icon: '', permission: ["0", "1", "2", "3"] }
+      // },
+      // {
+      //   path: 'bakeHistoryOverview',
+      //   name: 'BakeHistoryOverview',
+      //   component: () => import('@/views/bake_module/bake_history_overview/index'),
+      //   meta: { title: '烘烤历史总览', icon: '', permission: ["0", "1", "2", "3"] }
+      // },
       {
-        path: 'sdevice',
-        name: 'DeviceSupervision',
-        component: () => import('@/views/bake_module/sdevice'),
-        meta: { title: '设备监管', icon: '', permission: ["0", "1", "2", "3"] }
+        path: 'bakeryList',
+        name: 'BakeryList',
+        component: () => import('@/views/bake_module/bakery_list/index'),
+        meta: { title: '烤房运行列表(new)', icon: '', permission: ["0", "1", "2", "3"] }
       },
       {
-        path: 'record',
-        name: 'Record',
-        component: () => import('@/views/bake_module/record'),
-        meta: { title: '烘烤记录', icon: '', permission: ["0", "1", "2", "3"] }
+        path: 'bakeryDetail',
+        name: 'BakeryDetail',
+        component: () => import('@/views/bakery_detail/index'),
+      },
+      {
+        path: 'lineModel',
+        name: 'LineModel',
+        component: () => import('@/views/template_module/line_model/index'),
+        meta: { title: '曲线模型', icon: '', permission: ["0", "1", "2", "3"] }
+      },
+      // {
+      //   path: 'deviceRunningList',
+      //   name: 'DeviceRunningList',
+      //   component: () => import('@/views/bake_module/device_running_list/sdevice'),
+      //   meta: { title: '烤房运行列表', icon: '', permission: ["0", "1", "2", "3"] }
+      // },
+      {
+        path: 'bakeRecordManagement',
+        name: 'BakeRecordManagement',
+        component: () => import('@/views/bake_module/bake_record_management/record'),
+        meta: { title: '烘烤批次管理', icon: '', permission: ["0", "1", "2", "3"] }
       },
       {
         path: 'mdevice',
         name: 'DeviceManagement',
         component: () => import('@/views/bake_module/mdevice'),
-        meta: { title: '设备管理', icon: '', permission: ["0", "1", "2", "3"] }
+        meta: { title: '烤房管理', icon: '', permission: ["0", "1", "2", "3"] }
       },
       {
         path: 'station',
@@ -97,7 +175,27 @@ export const constantRoutes = [
       }
     ]
   },
-
+  // {
+  //   path: '/template',
+  //   component: Layout,
+  //   redirect: '/template/line',
+  //   name: 'Template',
+  //   meta: { title: '模板管理', icon: 'el-icon-odometer' },
+  //   children: [
+  //     {
+  //       path: 'lineModel',
+  //       name: 'LineModel',
+  //       component: () => import('@/views/template_module/line_model/index'),
+  //       meta: { title: '曲线模型', icon: '', permission: ["0", "1", "2", "3"] }
+  //     },
+  //     // {
+  //     //   path: 'bakeryTemplate',
+  //     //   name: 'BakeryTemplate',
+  //     //   component: () => import('@/views/template_module/bakery_template/index'),
+  //     //   meta: { title: '烤房模板', icon: '', permission: ["0", "1", "2", "3"] }
+  //     // },
+  //   ]
+  // },
   {
     path: '/analysis',
     component: Layout,

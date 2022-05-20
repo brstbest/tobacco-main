@@ -7,5 +7,6 @@ const getters = {
   nname: state => state.user.nname,
   category: state => state.user.category,
   phone: state => state.user.phone,
+  device: state => state.device.device
 }
 export default getters

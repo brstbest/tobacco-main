@@ -15,6 +15,7 @@ import router from './router'
 import '@/icons' // icon
 import '@/permission' // permission control
 import VueECharts from 'vue-echarts'
+import * as echarts from 'echarts'
 import ECharts from 'echarts'
 import "vue-easytable/libs/theme-default/index.css";
 import VueEasytable from "vue-easytable";

@@ -15,9 +15,8 @@
 </template>
 
 <script>
-  import DateTimeComp from '../../../../components/DateTimeComp'
+  import DateTimeComp from '/src/components/DateTimeComp'
   import * as echarts from 'echarts'
-
 
   export default{
     name: 'HistoryLine',
