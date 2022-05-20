@@ -1,6 +1,7 @@
 <template>
   <div class="run-overview">
     <el-row class="run-overview-search-row" :gutter="20">
+<<<<<<< HEAD
       <el-col :span="6">
         <DateTimeComp></DateTimeComp>
       </el-col>
@@ -9,21 +10,50 @@
       </el-col>
       <el-col :span="4">
         <el-select v-model="station" style="width: 100%;" placeholder="烟站">
+=======
+      <el-col :span="4">
+        <el-select v-model="province" placeholder="省" style="width: 100%;">
 
         </el-select>
       </el-col>
       <el-col :span="4">
+        <el-select v-model="city" placeholder="州/市" style="width: 100%;">
+
+        </el-select>
+      </el-col>
+      <el-col :span="4">
+        <el-select v-model="county" placeholder="县/市" style="width: 100%;">
+>>>>>>> 6b9d7b2368fd3498770b1f9c29316fff628a27fa
+
+        </el-select>
+      </el-col>
+      <el-col :span="4">
+<<<<<<< HEAD
         <el-select v-model="group" style="width: 100%;" placeholder="烤房群">
+=======
+        <el-select v-model="station" placeholder="烟站" style="width: 100%;">
+>>>>>>> 6b9d7b2368fd3498770b1f9c29316fff628a27fa
 
         </el-select>
       </el-col>
       <el-col :span="4">
+<<<<<<< HEAD
         <el-select v-model="device" style="width: 100%;" placeholder="烤房">
 
         </el-select>
       </el-col>
       <el-col :span="2">
         <el-button type="primary" style="width: 100%;">查询</el-button>
+=======
+        <el-select v-model="group" placeholder="房群" style="width: 100%;">
+
+        </el-select>
+      </el-col>
+      <el-col :span="4">
+        <el-select v-model="device" placeholder="烤房" style="width: 100%;">
+
+        </el-select>
+>>>>>>> 6b9d7b2368fd3498770b1f9c29316fff628a27fa
       </el-col>
     </el-row>
 
@@ -93,9 +123,12 @@
   import Alert from './components/alert.vue'
   import Running from './components/running.vue'
   import Standby from './components/standby.vue'
+<<<<<<< HEAD
   
   import LocationComp from '/src/components/LocationComp'
   import DateTimeComp from '/src/components/DateTimeComp'
+=======
+>>>>>>> 6b9d7b2368fd3498770b1f9c29316fff628a27fa
 
   export default{
     name: 'RunOverview',
@@ -105,8 +138,11 @@
       Alert,
       Running,
       Standby,
+<<<<<<< HEAD
       LocationComp,
       DateTimeComp
+=======
+>>>>>>> 6b9d7b2368fd3498770b1f9c29316fff628a27fa
     },
     data() {
       return {

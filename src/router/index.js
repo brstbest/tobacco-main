@@ -139,6 +139,7 @@ export const constantRoutes = [
         meta: { title: '烤房运行列表(new)', icon: '', permission: ["0", "1", "2", "3"] }
       },
       {
+<<<<<<< HEAD
         path: 'bakeryDetail',
         name: 'BakeryDetail',
         component: () => import('@/views/bakery_detail/index'),
@@ -155,6 +156,31 @@ export const constantRoutes = [
       //   component: () => import('@/views/bake_module/device_running_list/sdevice'),
       //   meta: { title: '烤房运行列表', icon: '', permission: ["0", "1", "2", "3"] }
       // },
+=======
+        path: 'main',
+        name: 'BakeMain',
+        component: () => import('@/views/bake_module/main'),
+        meta: { title: '主页', icon: '', permission: ["0", "1", "2", "3"] }
+      },
+      {
+        path: 'runOverview',
+        name: 'RunOverview',
+        component: () => import('@/views/bake_module/run_overview/index'),
+        meta: { title: '烘烤运行总览', icon: '', permission: ["0", "1", "2", "3"] }
+      },
+      {
+        path: 'bakeHistoryOverview',
+        name: 'BakeHistoryOverview',
+        component: () => import('@/views/bake_module/bake_history_overview/index'),
+        meta: { title: '烘烤历史总览', icon: '', permission: ["0", "1", "2", "3"] }
+      },
+      {
+        path: 'deviceRunningList',
+        name: 'DeviceRunningList',
+        component: () => import('@/views/bake_module/device_running_list/sdevice'),
+        meta: { title: '烤房运行列表', icon: '', permission: ["0", "1", "2", "3"] }
+      },
+>>>>>>> 6b9d7b2368fd3498770b1f9c29316fff628a27fa
       {
         path: 'bakeRecordManagement',
         name: 'BakeRecordManagement',

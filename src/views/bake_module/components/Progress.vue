@@ -40,9 +40,15 @@
       setChartOptions() {
         let option = {
         			grid:{
+<<<<<<< HEAD
         				left:"-20",
         				top:"10",
         				right:"-40",
+=======
+        				left:"10",
+        				top:"10",
+        				right:"0",
+>>>>>>> 6b9d7b2368fd3498770b1f9c29316fff628a27fa
         				bottom:"10",
         				containLabel:true
         			},
@@ -71,6 +77,10 @@
         					axisTick:{show:false},
         					axisLine:{show:false},
         					axisLabel:{
+<<<<<<< HEAD
+=======
+        						color:"black",
+>>>>>>> 6b9d7b2368fd3498770b1f9c29316fff628a27fa
         						fontSize:14,
         					},
         					data:[80,40,60,10,80,50,70,80,90,60,60,60,60,60],

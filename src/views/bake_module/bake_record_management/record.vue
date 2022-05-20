@@ -101,7 +101,11 @@
     title="详细信息"
     :visible.sync="detailVisble"
     v-if="detailVisble"
+<<<<<<< HEAD
     size="100%">
+=======
+    size="50%">
+>>>>>>> 6b9d7b2368fd3498770b1f9c29316fff628a27fa
       <BakeDetail @watchChild="parentReceive" :row-msg="selectRow"></BakeDetail>
     </el-drawer>
 
